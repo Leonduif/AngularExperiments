@@ -1,0 +1,13 @@
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    @include bgHoverDarken($primary-color);
+    color: white;
+    border: 1px solid darken($primary-color, 5%);
+}
