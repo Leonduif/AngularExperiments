@@ -1,0 +1,9 @@
+$navigationWidth: 150px;
+
+.nav-list {
+    width: $navigationWidth;
+}
+
+.main-view {
+    margin-left: $navigationWidth;
+}

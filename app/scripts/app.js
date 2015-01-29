@@ -1,28 +1,21 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name experimentsApp
- * @description
- * # experimentsApp
- *
- * Main module of the application.
- */
+// Routing
 angular
-  .module('experimentsApp', [
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .module('experimentsApp', ['ngRoute', 'todo'])
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/home.html',
+                controller: 'MainCtrl',
+                controllerAs: 'main'
+            })
+            .when('/todo', {
+                templateUrl: 'views/todo.html',
+                controller: 'TodoCtrl',
+                controllerAs: 'todo'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    });
